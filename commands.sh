@@ -34,3 +34,11 @@ terraform workspace list
 terraform plan -out prod.tfplan
 
 terraform apply --auto-approve prod.tfplan
+
+
+
+#Terraform Graph
+
+terraform graph > base.dot
+code base.dot
+terraform graph | dot -Tsvg > graph.svg
